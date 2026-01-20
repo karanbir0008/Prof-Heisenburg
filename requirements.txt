@@ -2,3 +2,14 @@ streamlit
 python-dotenv
 langchain
 langchain-groq
+langchain-community
+langchain-classic
+langchain-text-splitters
+langchain-huggingface
+chromadb
+langchain-chroma
+langchain-groq
+sentence-transformers
+unstructured
+unstructured[pdf]
+nltk

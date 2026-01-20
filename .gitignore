@@ -1,14 +1,26 @@
-# virtual environment
+## Virtual environments
 myvenv/
+venv/
 
-# environment variables
+# Secrets
 .env
+.streamlit/secrets.toml
 
-# jupyter checkpoints
+# Chatbot core (explicitly ignored)
+chatbot.py
+chatbot_utility.py
+chatbot .ipynb
+
+# Databases
+vector_db/
+chroma.sqlite3
+
+# Cache
+__pycache__/
 .ipynb_checkpoints/
 
-# python cache
-__pycache__/
+requirement.txt
+# Documents
+*.pdf
 
-complete streamlit notes.pdf
-chatbot .ipynb
+science video.mp4
