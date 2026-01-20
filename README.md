@@ -38,19 +38,15 @@ Each module has been designed with controlled execution flow and session managem
 
 ## Application Screenshots
 
-### Home Page
-![Home Page](assets/Home Page.png)
+### HOME PAGE
+![Home Page](assets/Home%20Page.png)
+### AI TEACHER
+![AI Teacher](assets/AI%20teacher.png)
+### DOCUMENT ANALYZER
+![Document Analyzer](assets/Document%20Analyzer.png)
+### YOUTUBE SEARCHER
+![YouTube Search](assets/Youtube%20video%20finder.png)
 
-### AI Teacher Module
-![AI Teacher](assets/AI teacher.png)
-
-### Document Analyzer
-![Document Analyzer](assets/Document Analyzer.png)
-
-### Educational Video Search
-![YouTube Search](assets/Youtube video finder.png)
-
----
 
 ## Methodology and Implementation
 
