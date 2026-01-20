@@ -1,4 +1,8 @@
 # Prof. Heisenburg – AI-Based Study Assistant
+## Demo Video
+
+A short working demonstration of the project is available here:  
+🔗 https://youtu.be/4befdKljGMc
 
 ## Problem Statement
 
@@ -100,7 +104,4 @@ Special care is taken to manage Streamlit’s rerun behavior using session state
 
 ---
 
-## Demo Video
 
-A short working demonstration of the project is available here:  
-🔗 *(Add your demo video link here)*
