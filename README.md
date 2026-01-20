@@ -2,8 +2,7 @@
 ## Demo Video
 
 A short working demonstration of the project is available here:  
-🔗 https://youtu.be/4befdKljGMc
-
+🔗 https://youtu.be/Ky5na9nUf-4
 ## Problem Statement
 
 Most of the students in the secondary education level cannot get personal assistance in academics outside the class. Traditional modes of study rely mainly on textbooks, static notes, and limited availability of teachers, which makes concept clarification, revision, and understanding of documents pretty difficult.
