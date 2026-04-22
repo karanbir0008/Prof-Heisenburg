@@ -9,7 +9,7 @@ load_dotenv()
 # page layout
 st.set_page_config(
     page_title = "Chatbot",
-    page_icon = "icon.png",
+    page_icon = "assets/icon.png",
     layout = "centered"
 )
 

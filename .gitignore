@@ -2,25 +2,33 @@
 myvenv/
 venv/
 
-# Secrets
+## Secrets
 .env
 .streamlit/secrets.toml
 
-# Chatbot core (explicitly ignored)
-chatbot.py
-chatbot_utility.py
-chatbot .ipynb
-
-# Databases
+## Generated data / local stores
 vector_db/
 chroma.sqlite3
 
-# Cache
+## Local knowledge base content
+ncert books/
+
+## Local reference material
+docs/reference_materials/
+assets/media/science_video.mp4
+
+## Python cache
 __pycache__/
+*.py[cod]
+*$py.class
+
+## OS files
+Thumbs.db
+.DS_Store
+
+## Logs and local tooling
+*.log
+.pytest_cache/
+
+## Notebook checkpoints
 .ipynb_checkpoints/
-
-requirement.txt
-# Documents
-*.pdf
-
-science video.mp4

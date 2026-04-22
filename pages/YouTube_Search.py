@@ -1,9 +1,9 @@
 import streamlit as st
-from youtube_utility import make_mongo_db_collection, get_dict, getting_ai_agent
+from prof_heisenburg.youtube_utility import make_mongo_db_collection, get_dict, getting_ai_agent
 
 st.set_page_config(
     page_title="YouTube search",
-    page_icon="icon.png",
+    page_icon="assets/icon.png",
     layout="centered"
 )
 

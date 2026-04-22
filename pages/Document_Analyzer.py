@@ -1,5 +1,5 @@
 import streamlit as st
-from analyzer_utility import extract_text_of_file,create_collection,store_user,store_assistant,get_file_from_gridfs,db
+from prof_heisenburg.analyzer_utility import extract_text_of_file,create_collection,store_user,store_assistant,get_file_from_gridfs,db
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import os
@@ -9,7 +9,7 @@ POPPLER_PATH = st.secrets["POPPLER_PATH"]
 # page layout
 st.set_page_config(
     page_title = "Test Checker",
-    page_icon = "icon.png",
+    page_icon = "assets/icon.png",
     layout = "centered"
 )
 

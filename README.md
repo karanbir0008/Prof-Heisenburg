@@ -1,106 +1,62 @@
-# Prof. Heisenburg – AI-Based Study Assistant
+# Prof. Heisenburg
+
+Prof. Heisenburg is a Streamlit-based study assistant built to make science learning feel clearer and more approachable. I wanted this project to do more than answer questions, so I combined a few different AI workflows in one place: a classroom-style teacher, an NCERT-grounded retrieval mode, a document analyzer, and a YouTube topic finder.
+
+The idea behind the project is simple. Students often have to switch between textbooks, notes, videos, and search engines just to understand one topic well. This app tries to reduce that friction by giving them a single place where they can ask, read, analyze, and explore.
+
 ## Demo Video
 
 A short working demonstration of the project is available here:  
-🔗 https://youtu.be/Ky5na9nUf-4
-## Problem Statement
+https://youtu.be/Ky5na9nUf-4
 
-Most of the students in the secondary education level cannot get personal assistance in academics outside the class. Traditional modes of study rely mainly on textbooks, static notes, and limited availability of teachers, which makes concept clarification, revision, and understanding of documents pretty difficult.
+## What the project does
 
-There are online resources, but they are disjointed, very overwhelming, and many times unrelated to the official syllabus. Moreover, students also lack intelligent tools that can analyze academic documents, summarize content, and answer questions in a reliable and context-aware manner.
+- `AI Teacher` explains science concepts in a simple classroom-style way.
+- `NCERT mode` uses retrieval over textbook content stored in a vector database.
+- `Document Analyzer` extracts text from PDFs and images, then answers questions or summarizes the content.
+- `YouTube Search` finds topic-relevant videos for revision and deeper understanding.
+- `MongoDB storage` keeps chat and interaction history across the different tools.
 
-The challenge that has to be addressed in this project is designing an AI-based study assistant that can provide structured explanations, syllabus-restricted answers, and document analysis while maintaining clarity, correctness, and usability for students.
+## Why I built it
 
----
+Many students do not get personal academic help outside the classroom. Even when good resources exist online, they are often scattered, overwhelming, or not aligned with the syllabus. I built Prof. Heisenburg as a practical educational companion that can explain concepts clearly, stay grounded in NCERT material when needed, and help students work through their own documents.
 
-## Solution
+## How it works
 
-For this purpose, I created **Prof. Heisenburg**, which is a study assistant based on artificial intelligence and incorporates large language models with information retrieval systems and database systems. The tool has been designed to be used as a smart educational companion instead of a universal chatter bot.
+The project is built as a multi-page Streamlit application.
 
-The system is equipped with:
-- An interactive AI teacher for explanation of concepts  
-- A syllabus-restricted answering facility for NCERT-based questions  
-- A document analysis facility for answering questions and generating summaries from academic documents  
+- `Home.py` is the landing page.
+- `pages/AI_Teacher.py` handles the main teaching experience.
+- `pages/Document_Analyzer.py` supports OCR-based document analysis.
+- `pages/YouTube_Search.py` finds educational videos related to a topic.
+- `prof_heisenburg/` contains the utility modules used by the app logic.
 
-The chat history and uploaded documents are retained using database systems.
-
----
-
-## System Overview
-
-The application has been developed as a **multi-page web application** using the Streamlit platform, with the following well-defined modules:
-
-1. AI Teacher (General Mode)  
-2. NCERT-Specific Question Answering  
-3. AI Assistant for Searching Educational Videos  
-4. Document Analyzer for Academic Documents  
-
-Each module has been designed with controlled execution flow and session management to ensure correct behavior during user interactions.
-
----
+Behind the interface, the project uses LangChain-based workflows for retrieval and LLM interaction, ChromaDB for vector storage, MongoDB for chat and document history, Tesseract OCR for extracting text from files, and the YouTube Data API for topic-based video search.
 
 ## Application Screenshots
 
-### HOME PAGE
+### Home Page
 ![Home Page](assets/Home%20Page.png)
-### AI TEACHER
+
+### AI Teacher
 ![AI Teacher](assets/AI%20teacher.png)
-### DOCUMENT ANALYZER
-![Document Analyzer](assets/Document%20Analyzer.png)
-### YOUTUBE SEARCHER
-![YouTube Search](assets/Youtube%20video%20finder.png)
-
-
-## Methodology and Implementation
-
-### AI Teacher Module (General Mode)
-
-The AI Teacher allows students to submit questions related to science subjects. The general mode of the AI uses a large language model to provide precise explanations in simple and easy language. Chat history is recorded using MongoDB, ensuring continuity of conversations.
-
----
-
-### NCERT-Specific Mode (RAG-Based)
-
-For syllabus-based responses, NCERT textbooks are ingested in PDF format and processed by splitting them into smaller chunks, which are stored in a vector database.
-
-When a question is asked, relevant content is retrieved from the NCERT textbooks and provided as input to the language model. This approach ensures that answers are strictly confined to NCERT content and are supported by retrieved references.
-
----
 
 ### Document Analyzer
+![Document Analyzer](assets/Document%20Analyzer.png)
 
-The document analyzer allows users to upload academic documents in PDF or image formats.
+### YouTube Search
+![YouTube Search](assets/Youtube%20video%20finder.png)
 
-Workflow:
-- Uploaded files are stored using MongoDB GridFS  
-- PDF files are converted into images using Poppler  
-- Text is extracted using Tesseract OCR  
-- Extracted text is passed to the language model to:
-  - Answer questions related to the document, or  
-  - Generate a concise summary  
+## Running it locally
 
-The interaction is displayed in a chat-style interface showing both uploaded documents and AI responses.
+1. Create and activate a virtual environment.
+2. Install the dependencies with `pip install -r requirements.txt`.
+3. Copy `.env.example` to `.env` and add your keys and local paths.
+4. Add `.streamlit/secrets.toml` with your `POPPLER_PATH`.
+5. Start the app with `streamlit run Home.py`.
 
----
+## Repository notes
 
-### State and Execution Control
+Some parts of the project are intentionally not included in Git, such as secrets, local vector database files, NCERT source PDFs, and other machine-specific files. That keeps the repository cleaner and safer to share publicly.
 
-Special care is taken to manage Streamlit’s rerun behavior using session state. Database write operations and document processing steps are guarded to prevent duplicate inserts or repeated execution during reruns.
-
----
-
-## Technologies Used
-
-- Python  
-- Streamlit  
-- MongoDB and GridFS  
-- LangChain  
-- Chroma Vector Database  
-- Groq Large Language Models  
-- Tesseract OCR  
-- Poppler (PDF to Image Conversion)  
-- Pillow (PIL)  
-
----
-
-
+This project is still evolving, but the current version reflects the direction I care about most: building educational tools that are practical, understandable, and genuinely helpful to students.

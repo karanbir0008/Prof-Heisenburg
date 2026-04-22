@@ -3,7 +3,7 @@ import streamlit as st
 # setting page config
 st.set_page_config(
     page_title="Home",
-    page_icon="icon.png",
+    page_icon="assets/icon.png",
     layout = "centered"
 )
 st.markdown(
@@ -15,7 +15,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.video("science video.mp4",autoplay=True)
+st.video("assets/media/science_video.mp4",autoplay=True)
 
 
 col1, col2, col3 = st.columns(3)

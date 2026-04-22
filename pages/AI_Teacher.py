@@ -1,6 +1,6 @@
 import streamlit as st
-from chatbot_utility import start_db, start_llm, collection_name, get_dict
-from RAG_utility import retrieval_process, load_vector_db
+from prof_heisenburg.chatbot_utility import start_db, start_llm, collection_name, get_dict
+from prof_heisenburg.RAG_utility import retrieval_process, load_vector_db
 
 # SYSTEM PROMPTS 
 GENERAL_SYSTEM_PROMPT = """You are Prof. Heisenburg, an experienced science teacher.
@@ -21,7 +21,7 @@ If the topic is not covered in NCERT, respond exactly:
 # page layout
 st.set_page_config(
     page_title = "Chatbot",
-    page_icon = "icon.png",
+    page_icon = "assets/icon.png",
     layout = "centered"
 )
 
